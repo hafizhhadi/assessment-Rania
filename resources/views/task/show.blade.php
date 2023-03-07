@@ -14,7 +14,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-end">Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name">
+                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name', $task->name) }}">
                             </div>
                             @if ($errors->has('name'))
                                 <div class="col-md-10 mt-2" style="text-align: right">
@@ -27,7 +27,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-end">Description</label>
 
                             <div class="col-md-6">
-                                <textarea name="description" class="form-control" id="description" rows="2"></textarea>
+                                <textarea name="description" class="form-control" id="description" rows="2">{{ old('description', $task->description) }}</textarea>
                             </div>
                             @if ($errors->has('description'))
                                 <div class="col-md-10 mt-2" style="text-align: right">
