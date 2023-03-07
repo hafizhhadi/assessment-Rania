@@ -38,8 +38,10 @@ class TaskController extends Controller
         return to_route('home');
     }
 
-    public function delete()
+    public function delete(Task $task)
     {
+        $task->delete();
 
+        return to_route('home');
     }
 }
