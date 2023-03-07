@@ -20,7 +20,7 @@
 
                 <div class="card-body">
                     <div style="text-align: right">
-                        <a href="{{ route('task.create') }}" type="button" class="btn btn-primary">Add Task</a>
+                        <a href="{{ route('task.create') }}" type="button" class="btn btn-outline-primary">Add Task</a>
                     </div>
                     <br>
                     <table class="table">
@@ -38,7 +38,9 @@
                                     <td>{{ $keys + 1 }}</td>
                                     <td>{{ $task->name }}</td>
                                     <td>{{ $task->description }}</td>
-                                    <td>-</td>
+                                    <td>
+                                        <a href="" type="button" class="btn btn-outline-warning btn-sm">Edit</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
