@@ -23,6 +23,14 @@
                             <textarea name="description" class="form-control" id="description" rows="2"></textarea>
                         </div>
                     </div>
+
+                    <div class="row mb-0" style="text-align: right">
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" class="btn btn-primary">
+                               Create
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
