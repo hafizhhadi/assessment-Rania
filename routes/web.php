@@ -27,3 +27,4 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/create', [TaskController::class, 'create'])->name('task.create');
 Route::post('/store', [TaskController::class, 'store'])->name('task.store');
 Route::get('/show/{task}', [TaskController::class, 'show'])->name('task.show');
+Route::post('/update/{task}', [TaskController::class, 'update'])->name('task.update');
