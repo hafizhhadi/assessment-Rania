@@ -19,6 +19,10 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
+                    <div style="text-align: right">
+                        <button type="button" class="btn btn-primary">Add Task</button>
+                    </div>
+                    <br>
                     <table class="table">
                         <thead>
                         <tr>
