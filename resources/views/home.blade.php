@@ -28,6 +28,7 @@
                             <tr>
                                 <th>No.</th>
                                 <th>To do</th>
+                                <th>Description</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -38,6 +39,7 @@
                                     <td>{{ $keys + 1 }}</td>
                                     <td>{{ $task->name }}</td>
                                     <td>{{ $task->description }}</td>
+                                    <td>{{ $task->status }}</td>
                                     <td>
                                         <a href="{{ route('task.show', $task) }}" type="button" class="btn btn-outline-warning btn-sm">Edit</a>
                                         <a href="{{ route('task.delete', $task) }}" type="button" class="btn btn-outline-danger btn-sm">Delete</a>
