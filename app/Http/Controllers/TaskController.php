@@ -22,4 +22,10 @@ class TaskController extends Controller
 
         return to_route('home');
     }
+
+    public function show()
+    {
+        return view('task.show');
+    }
+    
 }
