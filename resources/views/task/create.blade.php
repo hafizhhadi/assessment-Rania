@@ -29,8 +29,8 @@
 
                         <div class="row mb-0" style="text-align: right">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                Add
+                                <button type="submit" class="btn btn-outline-success btn-sm">
+                                Save
                                 </button>
                             </div>
                         </div>
