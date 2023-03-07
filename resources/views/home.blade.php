@@ -39,7 +39,7 @@
                                     <td>{{ $task->name }}</td>
                                     <td>{{ $task->description }}</td>
                                     <td>
-                                        <a href="" type="button" class="btn btn-outline-warning btn-sm">Edit</a>
+                                        <a href="{{ route('task.show', $task) }}" type="button" class="btn btn-outline-warning btn-sm">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach
