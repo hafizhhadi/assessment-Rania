@@ -20,7 +20,7 @@
 
                 <div class="card-body">
                     <div style="text-align: right">
-                        <button type="button" class="btn btn-primary">Add Task</button>
+                        <a href="{{ route('create') }}" type="button" class="btn btn-primary">Add Task</a>
                     </div>
                     <br>
                     <table class="table">
