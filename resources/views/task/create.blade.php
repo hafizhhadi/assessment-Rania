@@ -8,7 +8,7 @@
                 <div class="card-header">Add New Task</div>
 
                 <div class="card-body">
-                    <form method="POST" action="">
+                    <form method="POST" action="{{ route('task.store') }}">
                         @csrf
 
                         <div class="row mb-3">
