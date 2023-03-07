@@ -45,8 +45,12 @@ class TaskController extends Controller
         return to_route('home');
     }
 
-    public function completeTask()
+    public function completeTask(Task $task)
     {
+        $task->update([
+            'status' => 'done',
+        ]);
 
+        return to_route('home');
     }
 }
