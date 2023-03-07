@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use App\Enums\TaskStatusEnum;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
 
@@ -49,7 +50,7 @@ class TaskController extends Controller
     public function completeTask(Task $task)
     {
         $task->update([
-            'status' => 'done',
+            'status' => TaskStatusEnum::Done,
         ]);
 
         return to_route('home');
