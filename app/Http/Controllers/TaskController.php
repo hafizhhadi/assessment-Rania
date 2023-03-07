@@ -17,7 +17,7 @@ class TaskController extends Controller
         Task::create([
             'name' => $request->name,
             'description' => $request->name,
-            'status' => 'Pending',
+            'status' => 'In-Process',
         ]);
 
         return to_route('home');
