@@ -30,7 +30,7 @@
                         <div class="row mb-0" style="text-align: right">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                Create
+                                Add
                                 </button>
                             </div>
                         </div>
