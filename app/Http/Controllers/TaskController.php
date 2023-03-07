@@ -10,4 +10,9 @@ class TaskController extends Controller
     {
         return view('task.create');
     }
+
+    public function store()
+    {
+        
+    }
 }
