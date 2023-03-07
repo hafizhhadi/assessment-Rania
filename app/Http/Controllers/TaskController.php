@@ -14,7 +14,7 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        $task = Task::create([
+        Task::create([
             'name' => $request->name,
             'description' => $request->name,
             'status' => 'Pending',
@@ -28,4 +28,13 @@ class TaskController extends Controller
         return view('task.show', compact('task'));
     }
 
+    public function update(Request $request, Task $task)
+    {
+        $task->update([
+            'name' => $request->name,
+            'description' => $request->description,
+        ]);
+        
+        return to_route('home');
+    }
 }
