@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Enums\TaskStatusEnum;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -16,6 +17,10 @@ class Task extends Model
         'uuid',
         'description',
         'status',
+    ];
+
+    protected $casts = [
+        'status' => TaskStatusEnum::class
     ];
 
     public function user()
