@@ -34,7 +34,12 @@ class TaskController extends Controller
             'name' => $request->name,
             'description' => $request->description,
         ]);
-        
+
         return to_route('home');
+    }
+
+    public function delete()
+    {
+
     }
 }
