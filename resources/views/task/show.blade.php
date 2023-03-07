@@ -13,7 +13,7 @@
                         <label for="name" class="col-md-4 col-form-label text-md-end">Name</label>
 
                         <div class="col-md-6">
-                            <input id="name" type="text" class="form-control" name="name">
+                            <input id="name" type="text" class="form-control" name="name" value="{{ $task->name }}">
                         </div>
                     </div>
 
@@ -21,7 +21,7 @@
                         <label for="description" class="col-md-4 col-form-label text-md-end">Description</label>
 
                         <div class="col-md-6">
-                            <textarea name="description" class="form-control" id="description" rows="2"></textarea>
+                            <textarea name="description" class="form-control" id="description" rows="2">{{ $task->description }}</textarea>
                         </div>
                     </div>
 
