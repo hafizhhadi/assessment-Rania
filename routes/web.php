@@ -22,4 +22,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/create', [TaskController::class, 'create'])->name('create');
+
+//Task
+Route::get('/create', [TaskController::class, 'create'])->name('task.create');
