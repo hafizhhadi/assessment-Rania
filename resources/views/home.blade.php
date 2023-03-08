@@ -31,16 +31,18 @@
                                 <th>To do</th>
                                 <th>Description</th>
                                 <th>Status</th>
+                                <th>Created At</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($tasks as $keys => $task)
+                            @forelse ($tasks as $keys => $task)
                                 <tr>
                                     <td>{{ $keys + 1 }}</td>
-                                    <td>{{ $task->name }}</td>
-                                    <td>{{ $task->description }}</td>
+                                    <td>{{ ucfirst($task->name) }}</td>
+                                    <td>{{ ucfirst($task->description) }}</td>
                                     <td>{{ $task->status }}</td>
+                                    <td>{{ $task->getTaskCreatedAtDiffForHuman() }}</td>
                                     <td>
                                         <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#doneModal">Done</button>
                                         <a href="{{ route('task.show', $task) }}" type="button" class="btn btn-outline-warning btn-sm">Edit</a>
@@ -49,7 +51,14 @@
                                 </tr>
                                 @include('task.modal.done')
                                 @include('task.modal.delete')
-                            @endforeach
+                            @empty
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>No data, Please add new data</td>
+                            <td></td>
+                            <td></td>
+                            @endforelse
                         </tbody>
                     </table>
                     <br>
