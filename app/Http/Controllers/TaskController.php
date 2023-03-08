@@ -28,6 +28,8 @@ class TaskController extends Controller
 
     public function show(Task $task)
     {
+        $this->authorize('show', $task);
+        
         return view('task.show', compact('task'));
     }
 
@@ -46,7 +48,7 @@ class TaskController extends Controller
     public function delete(Task $task)
     {
         $this->authorize('delete', $task);
-        
+
         $task->delete();
 
         return to_route('home');
@@ -60,4 +62,5 @@ class TaskController extends Controller
 
         return to_route('home');
     }
+
 }
