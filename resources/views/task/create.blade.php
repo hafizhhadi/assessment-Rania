@@ -39,11 +39,11 @@
 
                         <div class="row mb-0" style="text-align: right">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-outline-success btn-sm">
-                                Save
-                                </button>
+                                <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#saveModal">Save</button>
                             </div>
                         </div>
+                        
+                        @include('task.modal.add')
                     </form>
                 </div>
             </div>
