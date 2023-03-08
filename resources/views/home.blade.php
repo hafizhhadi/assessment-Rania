@@ -42,7 +42,7 @@
                                     <td>{{ $task->description }}</td>
                                     <td>{{ $task->status }}</td>
                                     <td>
-                                        <a href="{{ route('task.complete', $task) }}" type="button" class="btn btn-outline-success btn-sm">Done</a>
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#doneModal">Done</button>
                                         <a href="{{ route('task.show', $task) }}" type="button" class="btn btn-outline-warning btn-sm">Edit</a>
                                         <a onclick="return confirm('Are you sure you want to delete this task?')" href="{{ route('task.delete', $task) }}" type="button" class="btn btn-outline-danger btn-sm">Delete</a>
                                     </td>
@@ -52,6 +52,8 @@
                     </table>
                 </div>
             </div>
+            
+            @include('task.modal.done')
         </div>
     </div>
 </div>
