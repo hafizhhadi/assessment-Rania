@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use App\Enums\TaskStatusEnum;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $tasks = Task::where('user_id', auth()->user()->id)->get();
-      
-        return view('home', compact('tasks'));
+        $completedTasks = $tasks->where('status', TaskStatusEnum::Done)->count();
+
+        return view('home', compact('tasks', 'completedTasks'));
     }
 }
