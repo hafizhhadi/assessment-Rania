@@ -47,14 +47,13 @@
                                         <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
                                     </td>
                                 </tr>
+                                @include('task.modal.done')
+                                @include('task.modal.delete')
                             @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
-
-            @include('task.modal.done')
-            @include('task.modal.delete')
         </div>
     </div>
 </div>
