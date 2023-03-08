@@ -2,14 +2,17 @@
 
 namespace App\Notifications;
 
+use App\Models\Task;
 use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notification;
 
 class TaskNotify extends Notification implements ShouldQueue
 {
     use Queueable;
+
+    private $task;
 
     public function __construct($task)
     {
@@ -24,9 +27,9 @@ class TaskNotify extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                    ->line('Your Task'.$this->task->name.'has been completed')
+                    ->action('Notification Action', url('/show/'.$this->task->uuid))
+                    ->line('Thank you!');
     }
 
     public function toArray($notifiable)
