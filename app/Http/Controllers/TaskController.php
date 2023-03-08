@@ -56,10 +56,12 @@ class TaskController extends Controller
 
     public function completeTask(Task $task)
     {
+        $this->authorize('update', $task);
+        
         $task->update([
             'status' => TaskStatusEnum::Done,
         ]);
-
+        
         return to_route('home');
     }
 
