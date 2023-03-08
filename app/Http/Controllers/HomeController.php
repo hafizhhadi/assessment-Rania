@@ -27,7 +27,8 @@ class HomeController extends Controller
     {
         $tasks = Task::where('user_id', auth()->user()->id)->get();
         $completedTasks = $tasks->where('status', TaskStatusEnum::Done)->count();
+        $inProgressTasks = $tasks->where('status', TaskStatusEnum::InProgress)->count();
 
-        return view('home', compact('tasks', 'completedTasks'));
+        return view('home', compact('tasks', 'completedTasks', 'inProgressTasks'));
     }
 }
