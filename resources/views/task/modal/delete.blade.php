@@ -10,7 +10,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+          <a href="{{ route('task.delete', $task) }}" type="button" class="btn btn-outline-danger btn-sm">Delete</a>
         </div>
       </div>
     </div>
