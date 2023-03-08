@@ -27,4 +27,10 @@ class Task extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function scopeCompletedTask($query)
+    {
+        return $query->where('status', TaskStatusEnum::Done);
+    }
+    
 }
