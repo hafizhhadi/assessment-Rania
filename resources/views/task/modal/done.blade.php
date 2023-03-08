@@ -10,7 +10,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-outline-success btn-sm">Done</button>
+          <a href="{{ route('task.complete', $task) }}" type="button" class="btn btn-outline-success btn-sm">Done</a>
         </div>
       </div>
     </div>
