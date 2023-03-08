@@ -33,6 +33,8 @@ class TaskController extends Controller
 
     public function update(UpdateTaskRequest $request, Task $task)
     {
+        $this->authorize('update', $task);
+
         $task->update([
             'name' => $request->name,
             'description' => $request->description,
