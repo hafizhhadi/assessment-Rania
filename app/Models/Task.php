@@ -43,4 +43,9 @@ class Task extends Model
         return $query->where('user_id', $userId);
     }
 
+    public function getTaskCreatedAtDiffForHuman()
+    {
+        return $this->created_at->diffForHumans();
+    }
+
 }
