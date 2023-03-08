@@ -17,6 +17,8 @@ class TaskController extends Controller
 
     public function store(StoreTaskRequest $request)
     {
+        $this->authorize('store', $task);
+        
         Task::create([
             'user_id' => auth()->user()->id,
             'name' => $request->name,
@@ -29,7 +31,7 @@ class TaskController extends Controller
     public function show(Task $task)
     {
         $this->authorize('show', $task);
-        
+
         return view('task.show', compact('task'));
     }
 
