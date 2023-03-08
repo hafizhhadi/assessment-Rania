@@ -44,7 +44,7 @@
                                     <td>
                                         <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#doneModal">Done</button>
                                         <a href="{{ route('task.show', $task) }}" type="button" class="btn btn-outline-warning btn-sm">Edit</a>
-                                        <a onclick="return confirm('Are you sure you want to delete this task?')" href="{{ route('task.delete', $task) }}" type="button" class="btn btn-outline-danger btn-sm">Delete</a>
+                                        <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -52,8 +52,9 @@
                     </table>
                 </div>
             </div>
-            
+
             @include('task.modal.done')
+            @include('task.modal.delete')
         </div>
     </div>
 </div>
