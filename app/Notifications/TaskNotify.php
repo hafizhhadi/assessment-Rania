@@ -27,8 +27,8 @@ class TaskNotify extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('Your Task'.$this->task->name.'has been completed')
-                    ->action('Notification Action', url('/show/'.$this->task->uuid))
+                    ->line('Your Task ' . $this->task->name . ' has been completed!')
+                    ->action('Task Detail', url('/show/'.$this->task->uuid))
                     ->line('Thank you!');
     }
 
