@@ -25,7 +25,10 @@ class TaskController extends Controller
             'description' => $request->description,
         ]);
 
-        return to_route('home');
+        return to_route('home')->with([
+            'message' => __('messages.success'),
+            'alert' => __('alerts.success'),
+        ]);
     }
 
     public function show(Task $task)
@@ -44,7 +47,10 @@ class TaskController extends Controller
             'description' => $request->description,
         ]);
 
-        return to_route('home');
+        return to_route('home')->with([
+            'message' => __('messages.update'),
+            'alert' => __('alerts.update'),
+        ]);
     }
 
     public function delete(Task $task)
@@ -53,7 +59,10 @@ class TaskController extends Controller
 
         $task->delete();
 
-        return to_route('home');
+        return to_route('home')->with([
+            'message' => __('messages.delete'),
+            'alert' => __('alerts.delete'),
+        ]);
     }
 
     public function completeTask(Task $task)
@@ -66,7 +75,10 @@ class TaskController extends Controller
         
         Notification::send($task->user, new TaskNotify($task));
 
-        return to_route('home');
+        return to_route('home')->with([
+            'message' => __('messages.complete'),
+            'alert' => __('alerts.success'),
+        ]);
     }
 
 }
