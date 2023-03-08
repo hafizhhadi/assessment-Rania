@@ -33,4 +33,9 @@ class Task extends Model
         return $query->where('status', TaskStatusEnum::Done);
     }
     
+    public function scopeInProgressTask($query)
+    {
+        return $query->where('status', TaskStatusEnum::InProgress);
+    }
+
 }
