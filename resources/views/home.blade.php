@@ -20,7 +20,7 @@
 
                 <div class="card-body">
                     <div> Total Finish Tasks: {{ $completedTasks }} </div>
-                    <div> Total In-Progress Tasks: </div>
+                    <div> Total In-Progress Tasks: {{ $inProgressTasks }} </div>
                     <div style="text-align: right">
                         <a href="{{ route('task.create') }}" type="button" class="btn btn-outline-primary">Add Task</a>
                     </div>
