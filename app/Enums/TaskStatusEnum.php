@@ -3,6 +3,6 @@
 namespace App\Enums;
 
 enum TaskStatusEnum:string {
-    case InProgress = 'in-progress';
-    case Done = 'done';
+    case InProgress = 'In-progress';
+    case Done = 'Done';
 }

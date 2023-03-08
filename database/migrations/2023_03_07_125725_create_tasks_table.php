@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedInteger('user_id')->nullable();
             $table->string('name');
             $table->string('description');
-            $table->string('status')->default('in-progress');
+            $table->string('status')->default('In-progress');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
