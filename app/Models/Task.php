@@ -38,4 +38,9 @@ class Task extends Model
         return $query->where('status', TaskStatusEnum::InProgress);
     }
 
+    public function scopeByUser($query, $userId)
+    {
+        return $query->where('user_id', $userId);
+    }
+
 }
