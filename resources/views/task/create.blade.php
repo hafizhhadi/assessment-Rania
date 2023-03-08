@@ -39,11 +39,11 @@
 
                         <div class="row mb-0" style="text-align: right">
                             <div class="col-md-6 offset-md-4">
-                                <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#saveModal">Save</button>
+                                <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#storeModal">Save</button>
                             </div>
                         </div>
-                        
-                        @include('task.modal.add')
+
+                        @include('task.modal.store')
                     </form>
                 </div>
             </div>
