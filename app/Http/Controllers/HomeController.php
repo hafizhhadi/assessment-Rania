@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $tasks = Task::ByUser(Auth()->user()->id)->get();
+        $tasks = Task::ByUser(Auth()->user()->id)->latest()->paginate(5);
         $completedTasks = Task::CompletedTask()->count();
         $inProgressTasks = Task::InProgressTask()->count();
 
