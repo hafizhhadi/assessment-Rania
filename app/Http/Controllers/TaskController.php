@@ -45,6 +45,8 @@ class TaskController extends Controller
 
     public function delete(Task $task)
     {
+        $this->authorize('delete', $task);
+        
         $task->delete();
 
         return to_route('home');
