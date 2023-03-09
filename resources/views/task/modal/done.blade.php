@@ -1,4 +1,4 @@
-<div class="modal fade" id="doneModal" tabindex="-1" aria-labelledby="doneModalLabel" aria-hidden="true">
+<div class="modal fade" id="doneModal{{ $task->id }}" tabindex="-1" aria-labelledby="doneModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
