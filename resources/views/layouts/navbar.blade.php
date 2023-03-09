@@ -7,6 +7,14 @@
         </div>
         <ul class="navbar-nav header-right">
             <li class="nav-item dropdown header-profile">
+                <div>
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    <div>{{ __('Welcome') }}</div>
+                </div>
                 <div>Admin</div>
                 <a class="nav-link " href="javascript:void(0);" data-bs-toggle="dropdown">
                     <svg xmlns="http://www.w3.org/2000/svg" width="23.262" height="24" viewBox="0 0 23.262 24">
