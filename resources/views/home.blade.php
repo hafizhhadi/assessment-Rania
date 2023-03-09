@@ -17,6 +17,7 @@
                 <div style="text-align: right">
                     <a href="{{ route('task.create') }}" type="button" class="btn btn-outline-primary btn-xs"><i class="fa fa-plus" aria-hidden="true"></i></a>
                 </div>
+                
                 <table class="table">
                     <thead>
                         <tr>
@@ -28,6 +29,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         @forelse ($tasks as $keys => $task)
                             <tr>
@@ -53,6 +55,7 @@
                         <td></td>
                         @endforelse
                     </tbody>
+                    
                 </table>
                 <br>
                 <nav aria-label="Page navigation example">
@@ -63,6 +66,7 @@
             </div>
         </div>
     </div>
+    
     <div class="col-md-4">
         <div class="accordion accordion-danger-solid" id="accordion-two">
             <div class="accordion-item">
