@@ -6,11 +6,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Finish this task?
+          Confirm Finish Task?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-          <a href="{{ route('task.complete', $task) }}" type="button" class="btn btn-outline-success btn-sm">Done</a>
+          <button type="button" class="btn btn-outline-secondary btn-xs" data-bs-dismiss="modal"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+          <a href="{{ route('task.complete', $task) }}" type="button" class="btn btn-outline-success btn-xs">Complete</a>
         </div>
       </div>
     </div>

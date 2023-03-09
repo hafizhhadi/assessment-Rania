@@ -9,8 +9,8 @@
           Confirm Create Task?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-outline-success btn-sm">Confirm</button>
+          <button type="button" class="btn btn-outline-secondary btn-xs" data-bs-dismiss="modal"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+          <button type="submit" class="btn btn-outline-success btn-xs">Confirm</button>
         </div>
       </div>
     </div>
