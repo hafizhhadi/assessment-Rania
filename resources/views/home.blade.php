@@ -63,17 +63,18 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="accordion" id="accordionExample">
+        <div class="accordion accordion-danger-solid" id="accordion-two">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#finishTask" aria-expanded="true" aria-controls="finishTask">
-                    Finish Tasks - {{ $completedTasks->count() }} Tasks
-                </button>
-              </h2>
-              <div id="finishTask" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+              <div class="accordion-header rounded-lg" id="accord-2One" data-bs-toggle="collapse" data-bs-target="#finishTask" aria-controls="finishTask" aria-expanded="true" role="button">
+                <span class="accordion-header-text"> Finish Tasks - {{ $completedTasks->count() }} Tasks</span>
+                <span class="accordion-header-indicator"></span>
+              </div>
+              <div id="finishTask" class="collapse accordion__body show" aria-labelledby="accord-2One" data-bs-parent="#accordion-two">
+                <div class="accordion-body-text">
                     @forelse ($completedTasks as $completedTask)
-                        <ul> <li>{{ ucfirst($completedTask->name) }}</li> </ul>
+                        <ul class="list-group">
+                            <li class="list-group-item">{{ ucfirst($completedTask->name) }}</li>
+                        </ul>
                     @empty
                         No Finish tasks
                     @endforelse
@@ -81,15 +82,16 @@
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#inProgressTask" aria-expanded="false" aria-controls="inProgressTask">
-                    In-progress Tasks - {{ $inProgressTasks->count() }} Tasks
-                </button>
-              </h2>
-              <div id="inProgressTask" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+              <div class="accordion-header collapsed rounded-lg" id="accord-2Two" data-bs-toggle="collapse" data-bs-target="#inProgressTask" aria-controls="inProgressTask"   aria-expanded="true"  role="button">
+                <span class="accordion-header-text">In-progress Tasks - {{ $inProgressTasks->count() }} Tasks</span>
+               <span class="accordion-header-indicator"></span>
+              </div>
+              <div id="inProgressTask" class="collapse accordion__body" aria-labelledby="accord-2Two" data-bs-parent="#accordion-two">
+                <div class="accordion-body-text">
                     @forelse ($inProgressTasks as $inProgressTask)
-                        <ul> <li>{{ ucfirst($inProgressTask->name) }}</li> </ul>
+                        <ul class="list-group">
+                            <li class="list-group-item">{{ ucfirst($inProgressTask->name) }}</li>
+                        </ul>
                     @empty
                         No In-progress tasks
                     @endforelse
