@@ -1,52 +1,46 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Add New Task</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('task.store') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">Name</label>
-                        
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{old('name')}}">
-                            </div>
-                            @if ($errors->has('name'))
-                                <div class="col-md-10 mt-2" style="text-align: right">
-                                    <span class="text-danger">{{ $errors->first('name') }}</span>
-                                </div>
-                            @endif
+<div class="col-xl-8 col-lg-8">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Create New Task</h4>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="{{ route('task.store') }}">
+                @csrf
+                <div class="basic-form">
+                    <div class="mb-3 row">
+                        <label class="col-sm-3 col-form-label">Name</label>
+                        <div class="col-sm-9">
+                            <input id="name" type="text" class="form-control" name="name" value="{{old('name')}}">
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="description" class="col-md-4 col-form-label text-md-end">Description</label>
-
-                            <div class="col-md-6">
-                                <textarea name="description" class="form-control" id="description" rows="2">{{ old('description') }}</textarea>
-                            </div>
-                            @if ($errors->has('description'))
-                                <div class="col-md-10 mt-2" style="text-align: right">
-                                    <span class="text-danger">{{ $errors->first('description') }}</span>
-                                </div>
-                            @endif
+                        @if ($errors->has('name'))
+                        <div class="col" style="text-align: right">
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
                         </div>
-
-                        <div class="row mb-0" style="text-align: right">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#storeModal">Save</button>
-                            </div>
+                        @endif
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-3 col-form-label">Description</label>
+                        <div class="col-sm-9">
+                            <textarea name="description" class="form-control" id="description">{{ old('description') }}</textarea>
                         </div>
-
-                        @include('task.modal.store')
-                    </form>
+                        @if ($errors->has('description'))
+                        <div class="col" style="text-align: right">
+                            <span class="text-danger">{{ $errors->first('description') }}</span>
+                        </div>
+                        @endif
+                    </div>
+                    <div class="row" style="text-align: right">
+                        <div>
+                            <a href="{{ route('home') }}" type="button" class="btn btn-outline-dark btn-xs"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                            <button type="button" class="btn btn-outline-warning btn-xs" data-bs-toggle="modal" data-bs-target="#storeModal">Save</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                @include('task.modal.store')
+            </form>
         </div>
     </div>
 </div>
