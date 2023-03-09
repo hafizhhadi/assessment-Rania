@@ -13,7 +13,7 @@
                             </div>
                          @endif
                         <div class="text-center mb-3">
-                            <a href="{{ route('login') }}"><img src="{!! asset('images/logo-full.png') !!}" alt=""></a>
+                            <a href="{{ route('login') }}"><img src="#" alt=""></a>
                         </div>
                         <h4 class="text-center mb-4">Forgot Password</h4>
                         <form method="POST" action="{{ route('password.email') }}">

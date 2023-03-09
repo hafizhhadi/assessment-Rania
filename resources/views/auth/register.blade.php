@@ -8,7 +8,7 @@
                 <div class="col-xl-12">
                     <div class="auth-form">
                         <div class="text-center mb-3">
-                            <a href="{{ route('login') }}"><img src="images/logo-full.png" alt=""></a>
+                            <a href="{{ route('login') }}"><img src="#" alt=""></a>
                         </div>
                         <h4 class="text-center mb-4">Sign up your account</h4>
                         <form method="POST" action="{{ route('register') }}">
@@ -16,7 +16,7 @@
 
                             <div class="mb-3">
                                 <label class="mb-1"><strong>Username</strong></label>
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="user" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -27,7 +27,7 @@
 
                             <div class="mb-3">
                                 <label class="mb-1"><strong>Email</strong></label>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="mail@email.com" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -38,7 +38,7 @@
 
                             <div class="mb-3">
                                 <label class="mb-1"><strong>Password</strong></label>
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
 
                             <div class="mb-3">
                                 <label class="mb-1"><strong>Confirm password</strong></label>
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="password">
 
                             </div>
         
