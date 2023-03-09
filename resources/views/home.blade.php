@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-md-9">
         @if (session()->has('message'))
             <div class="alert {{ session()->get('alert') }} alert-dismissible fade show" role="alert">
                 {{ session('message') }}
@@ -73,7 +73,7 @@
         </div>
     </div>
     
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="accordion accordion-danger-solid" id="accordion-two">
             <div class="accordion-item">
               <div class="accordion-header rounded-lg" id="accord-2One" data-bs-toggle="collapse" data-bs-target="#finishTask" aria-controls="finishTask" aria-expanded="true" role="button">
