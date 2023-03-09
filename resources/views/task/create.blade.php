@@ -9,6 +9,7 @@
         <div class="card-body">
             <form method="POST" action="{{ route('task.store') }}">
                 @csrf
+
                 <div class="basic-form">
                     <div class="mb-3 row">
                         <label class="col-sm-3 col-form-label">Name</label>
@@ -21,6 +22,7 @@
                             </div>
                         @endif
                     </div>
+
                     <div class="mb-3 row">
                         <label class="col-sm-3 col-form-label">Description</label>
                         <div class="col-sm-9">
@@ -32,6 +34,7 @@
                             </div>
                         @endif
                     </div>
+                    
                     <div class="row" style="text-align: right">
                         <div>
                             <a href="{{ route('home') }}" type="button" class="btn btn-outline-dark btn-xs"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
