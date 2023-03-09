@@ -14,7 +14,7 @@
 
             <div class="card-body">
                 <div style="text-align: right">
-                    <a href="{{ route('task.create') }}" type="button" class="btn btn-outline-success">Add Task</a>
+                    <a href="{{ route('task.create') }}" type="button" class="btn btn-outline-primary btn-xs"><i class="fa fa-plus" aria-hidden="true"></i></a>
                 </div>
                 <table class="table">
                     <thead>
@@ -36,9 +36,9 @@
                                 <td>{{ $task->status }}</td>
                                 <td>{{ $task->getTaskCreatedAtDiffForHuman() }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#doneModal">Done</button>
-                                    <a href="{{ route('task.show', $task) }}" type="button" class="btn btn-outline-warning btn-sm">Edit</a>
-                                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $task->id }}">Delete</button>
+                                    <button type="button" class="btn btn-outline-success btn-xxs" data-bs-toggle="modal" data-bs-target="#doneModal"><i class="fa fa-check" aria-hidden="true"></i></button>
+                                    <a href="{{ route('task.show', $task) }}" type="button" class="btn btn-outline-warning btn-xxs"><i class="fas fa-edit"></i></a>
+                                    <button type="button" class="btn btn-outline-danger btn-xxs" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $task->id }}"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                             @include('task.modal.done')
@@ -67,7 +67,6 @@
             <div class="accordion-item">
               <div class="accordion-header rounded-lg" id="accord-2One" data-bs-toggle="collapse" data-bs-target="#finishTask" aria-controls="finishTask" aria-expanded="true" role="button">
                 <span class="accordion-header-text"> Finish Tasks - {{ $completedTasks->count() }} Tasks</span>
-                <span class="accordion-header-indicator"></span>
               </div>
               <div id="finishTask" class="collapse accordion__body show" aria-labelledby="accord-2One" data-bs-parent="#accordion-two">
                 <div class="accordion-body-text">
@@ -84,7 +83,6 @@
             <div class="accordion-item">
               <div class="accordion-header collapsed rounded-lg" id="accord-2Two" data-bs-toggle="collapse" data-bs-target="#inProgressTask" aria-controls="inProgressTask"   aria-expanded="true"  role="button">
                 <span class="accordion-header-text">In-progress Tasks - {{ $inProgressTasks->count() }} Tasks</span>
-               <span class="accordion-header-indicator"></span>
               </div>
               <div id="inProgressTask" class="collapse accordion__body" aria-labelledby="accord-2Two" data-bs-parent="#accordion-two">
                 <div class="accordion-body-text">
