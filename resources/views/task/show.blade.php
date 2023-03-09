@@ -11,13 +11,13 @@
                 <div class="mb-3 row">
                     <label class="col-sm-3 col-form-label">Name</label>
                     <div class="col-sm-9">
-                        <input id="name" type="text" class="form-control" name="name" value="{{ $task->name }}" readonly>
+                        <input id="name" type="text" class="form-control-plaintext" name="name" value="{{ $task->name }}" readonly>
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label class="col-sm-3 col-form-label">Description</label>
                     <div class="col-sm-9">
-                        <textarea name="description" class="form-control" id="description" readonly>{{ $task->description }}</textarea>
+                        <textarea name="description" class="form-control-plaintext" id="description" readonly>{{ $task->description }}</textarea>
                     </div>
                 </div>
                 <div class="row" style="text-align: right">
