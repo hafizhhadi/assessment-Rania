@@ -36,11 +36,17 @@
                                 <td>{{ $keys + 1 }}</td>
                                 <td><a href="{{ route('task.show', $task) }}" class="link-primary">{{ ucfirst($task->name) }} </a></td>
                                 <td>{{ ucfirst($task->description) }}</td>
-                                <td>{{ $task->status }}</td>
+                                <td>
+                                    <a href="javascript:void(0)" class="badge badge-rounded badge-{{ trans('badges.' . $task->status->value) }}">
+                                        {{ $task->status }}
+                                    </a>
+                                </td>
                                 <td>{{ $task->getTaskCreatedAtDiffForHuman() }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-outline-success btn-xxs" data-bs-toggle="modal" data-bs-target="#doneModal"><i class="fa fa-check" aria-hidden="true"></i></button>
-                                    <a href="{{ route('task.edit', $task) }}" type="button" class="btn btn-outline-warning btn-xxs"><i class="fas fa-edit"></i></a>
+                                    @if ($task->status == App\Enums\TaskStatusEnum::InProgress)
+                                        <button type="button" class="btn btn-outline-success btn-xxs" data-bs-toggle="modal" data-bs-target="#doneModal"><i class="fa fa-check" aria-hidden="true"></i></button>
+                                        <a href="{{ route('task.edit', $task) }}" type="button" class="btn btn-outline-warning btn-xxs"><i class="fas fa-edit"></i></a>
+                                    @endif
                                     <button type="button" class="btn btn-outline-danger btn-xxs" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $task->id }}"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
