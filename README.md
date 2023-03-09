@@ -31,7 +31,6 @@ Project Description :
 https://rania.hafizhadi.cloud/
 
 - Deploy with AWS EC2 (LEMP Stack)
-- Database by AWS RDS
 - Subdomain managed by Cloudflare
 
 ## Local Test
