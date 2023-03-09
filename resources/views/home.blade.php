@@ -44,7 +44,7 @@
                                 <td>{{ $task->getTaskCreatedAtDiffForHuman() }}</td>
                                 <td>
                                     @if ($task->status == App\Enums\TaskStatusEnum::InProgress)
-                                        <button type="button" class="btn btn-outline-success btn-xxs" data-bs-toggle="modal" data-bs-target="#doneModal"><i class="fa fa-check" aria-hidden="true"></i></button>
+                                        <button type="button" class="btn btn-outline-success btn-xxs" data-bs-toggle="modal" data-bs-target="#doneModal{{ $task->id }}"><i class="fa fa-check" aria-hidden="true"></i></button>
                                         <a href="{{ route('task.edit', $task) }}" type="button" class="btn btn-outline-warning btn-xxs"><i class="fas fa-edit"></i></a>
                                     @endif
                                     <button type="button" class="btn btn-outline-danger btn-xxs" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $task->id }}"><i class="fa fa-trash" aria-hidden="true"></i></button>
