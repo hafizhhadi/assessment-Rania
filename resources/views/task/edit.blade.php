@@ -25,7 +25,7 @@
                     <div class="row" style="text-align: right">
                         <div>
                             <a href="{{ route('home') }}" type="button" class="btn btn-outline-dark btn-xs"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-                            <button type="button" class="btn btn-outline-warning btn-xs" data-bs-toggle="modal" data-bs-target="#updateModal">Save</button>
+                            <button type="button" class="btn btn-outline-warning btn-xs" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
