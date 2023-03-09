@@ -55,7 +55,7 @@
                         <td></td>
                         @endforelse
                     </tbody>
-                    
+
                 </table>
                 <br>
                 <nav aria-label="Page navigation example">
@@ -80,7 +80,7 @@
                             <li class="list-group-item">{{ ucfirst($completedTask->name) }}</li>
                         </ul>
                     @empty
-                        No Finish tasks
+                        No Finished tasks
                     @endforelse
                 </div>
               </div>
