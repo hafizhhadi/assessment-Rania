@@ -27,6 +27,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/create', [TaskController::class, 'create'])->name('task.create');
 Route::post('/store', [TaskController::class, 'store'])->name('task.store');
 Route::get('/show/{task:uuid}', [TaskController::class, 'show'])->name('task.show');
+Route::get('/edit/{task:uuid}', [TaskController::class, 'edit'])->name('task.edit');
 Route::post('/update/{task:uuid}', [TaskController::class, 'update'])->name('task.update');
 Route::get('/delete/{task:uuid}', [TaskController::class, 'delete'])->name('task.delete');
 Route::get('/complete/{task:uuid}', [TaskController::class, 'completeTask'])->name('task.complete');
