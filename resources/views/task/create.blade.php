@@ -16,9 +16,9 @@
                             <input id="name" type="text" class="form-control" name="name" value="{{old('name')}}">
                         </div>
                         @if ($errors->has('name'))
-                        <div class="col" style="text-align: right">
-                            <span class="text-danger">{{ $errors->first('name') }}</span>
-                        </div>
+                            <div class="col" style="text-align: right">
+                                <span class="text-danger">{{ $errors->first('name') }}</span>
+                            </div>
                         @endif
                     </div>
                     <div class="mb-3 row">
@@ -27,9 +27,9 @@
                             <textarea name="description" class="form-control" id="description">{{ old('description') }}</textarea>
                         </div>
                         @if ($errors->has('description'))
-                        <div class="col" style="text-align: right">
-                            <span class="text-danger">{{ $errors->first('description') }}</span>
-                        </div>
+                            <div class="col" style="text-align: right">
+                                <span class="text-danger">{{ $errors->first('description') }}</span>
+                            </div>
                         @endif
                     </div>
                     <div class="row" style="text-align: right">
