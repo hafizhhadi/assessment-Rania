@@ -10,8 +10,9 @@
             </div>
         @endif
         <div class="card">
-            <div class="card-header">Dashboard</div>
-
+            <div class="card-header">
+                <h4 class="card-title">To-Do-List</h4>
+            </div>
             <div class="card-body">
                 <div style="text-align: right">
                     <a href="{{ route('task.create') }}" type="button" class="btn btn-outline-primary btn-xs"><i class="fa fa-plus" aria-hidden="true"></i></a>
