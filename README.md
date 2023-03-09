@@ -66,7 +66,7 @@ https://github.com/hafizhhadi/assessment-Rania.git
 - https://mailtrap.io/
 - Login or register mailtrap
 - Add project 
-- Aelect created project
-- Aelect SMTP settings and go to integrations
-- Aelect Laravel 7+ 
+- Select created project
+- Select SMTP settings and go to integrations
+- Select Laravel 7+ 
 - Copy the values and paste in the .env file in the root directory of your project.
