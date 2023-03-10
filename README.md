@@ -56,10 +56,10 @@ https://github.com/hafizhhadi/assessment-Rania.git
 - php artisan key:generate
 - go to mysql > create db
 - go .env > DB_DATABASE = 'PUT DB THAT YOU CREATED IN PREVIOUS STEP'
-- php artisan db:seed --class=UserSeeder
 - php artisan serve
-- setup SMTP Mailtrap (for finished task notification)
-- credentials - username: admin@admin.com password: password
+- php artisan migrate:fresh --seed
+- setup SMTP Mailtrap (for completed task notification)
+- credentials - email: admin@rania.my password: password
 
 #### Setup Mailtrap
 - https://mailtrap.io/
