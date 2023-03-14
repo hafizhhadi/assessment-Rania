@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'success' => 'alert-success',
-	'delete' => 'alert-danger',
+    'success' => 'alert-success',
+    'delete' => 'alert-danger',
     'update' => 'alert-warning',
 ];

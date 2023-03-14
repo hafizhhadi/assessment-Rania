@@ -1,6 +1,6 @@
 <?php
 
 return [
-	'In-progress' => 'outline-primary',
-	'Done' => 'outline-success',
+    'In-progress' => 'outline-primary',
+    'Done' => 'outline-success',
 ];

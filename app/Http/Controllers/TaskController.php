@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Task;
-use Illuminate\Http\Request;
 use App\Enums\TaskStatusEnum;
-use App\Notifications\TaskNotify;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
+use App\Models\Task;
+use App\Notifications\TaskNotify;
 use Notification;
 
 class TaskController extends Controller
@@ -77,7 +76,7 @@ class TaskController extends Controller
         $task->update([
             'status' => TaskStatusEnum::Done,
         ]);
-        
+
         Notification::send($task->user, new TaskNotify($task));
 
         return to_route('home')->with([
@@ -85,5 +84,4 @@ class TaskController extends Controller
             'alert' => __('alerts.success'),
         ]);
     }
-
 }
