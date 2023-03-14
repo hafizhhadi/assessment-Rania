@@ -9,7 +9,6 @@ class TaskObserver
 {
     public function creating(Task $task): void
     {
-        $task->uuid=Str::uuid();
+        $task->uuid = Str::uuid();
     }
-    
 }

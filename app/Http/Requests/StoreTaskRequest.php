@@ -23,7 +23,7 @@ class StoreTaskRequest extends FormRequest
     {
         return [
             'name.required' => '**Please fill in name**',
-            'description.required' => '**Please fill in description**'
+            'description.required' => '**Please fill in description**',
         ];
     }
 }
