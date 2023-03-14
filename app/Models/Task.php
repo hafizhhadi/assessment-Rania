@@ -2,10 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\User;
 use App\Enums\TaskStatusEnum;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
@@ -20,7 +19,7 @@ class Task extends Model
     ];
 
     protected $casts = [
-        'status' => TaskStatusEnum::class
+        'status' => TaskStatusEnum::class,
     ];
 
     public function user()
@@ -32,7 +31,7 @@ class Task extends Model
     {
         return $query->where('status', TaskStatusEnum::Done);
     }
-    
+
     public function scopeInProgressTask($query)
     {
         return $query->where('status', TaskStatusEnum::InProgress);
@@ -47,5 +46,4 @@ class Task extends Model
     {
         return $this->created_at->diffForHumans();
     }
-
 }
