@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Models\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreTaskRequest;
-use App\Models\User;
 
 class TaskController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::with('tasks')->get();
+        if ($request->admin == 0 || !$request->admin) {
+            return response()->json([
+                'message' => 'You are not Admin'
+            ]);
+        }
 
+        $users = User::with('tasks')->get();
         return response()->json([
             'message' => 'success',
             'data' => $users,
