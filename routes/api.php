@@ -18,5 +18,7 @@ use App\Http\Controllers\API\LoginController;
 
 Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/index', [TaskController::class, 'index']);
-Route::post('/store', [TaskController::class, 'store']);
+Route::middleware(['auth:api'])->group(function () {
+    Route::get('/index', [TaskController::class, 'index']);
+    Route::post('/store', [TaskController::class, 'store']);
+});
